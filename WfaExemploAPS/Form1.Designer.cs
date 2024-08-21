@@ -33,7 +33,7 @@
             this.lblPerimetro = new System.Windows.Forms.Label();
             this.txtArea = new System.Windows.Forms.TextBox();
             this.lblArea = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbObjetos = new System.Windows.Forms.ComboBox();
             this.btnCriar = new System.Windows.Forms.Button();
             this.txtRaio = new System.Windows.Forms.TextBox();
             this.txtAltura = new System.Windows.Forms.TextBox();
@@ -52,7 +52,7 @@
             this.groupBox1.Controls.Add(this.lblPerimetro);
             this.groupBox1.Controls.Add(this.txtArea);
             this.groupBox1.Controls.Add(this.lblArea);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cmbObjetos);
             this.groupBox1.Controls.Add(this.btnCriar);
             this.groupBox1.Controls.Add(this.txtRaio);
             this.groupBox1.Controls.Add(this.txtAltura);
@@ -104,13 +104,14 @@
             this.lblArea.TabIndex = 10;
             this.lblArea.Text = "Área:";
             // 
-            // comboBox1
+            // cmbObjetos
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(470, 38);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 9;
+            this.cmbObjetos.FormattingEnabled = true;
+            this.cmbObjetos.Location = new System.Drawing.Point(470, 38);
+            this.cmbObjetos.Name = "cmbObjetos";
+            this.cmbObjetos.Size = new System.Drawing.Size(121, 21);
+            this.cmbObjetos.TabIndex = 9;
+            this.cmbObjetos.SelectedIndexChanged += new System.EventHandler(this.cmbObjetos_SelectedIndexChanged);
             // 
             // btnCriar
             // 
@@ -227,7 +228,7 @@
         private System.Windows.Forms.Label lblBase;
         private System.Windows.Forms.TextBox txtArea;
         private System.Windows.Forms.Label lblArea;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbObjetos;
         private System.Windows.Forms.Button btnCriar;
         private System.Windows.Forms.TextBox txtRaio;
         private System.Windows.Forms.TextBox txtAltura;

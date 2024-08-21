@@ -73,12 +73,13 @@ namespace WfaExemploAPS
         {
             if (cmbForma.Text.Equals("Quadrado"))
             {
-
+                FormaGeometrica quadrado = new Quadrado()
+                {
+                    Lado = Convert.ToDouble(txtBase.Text)
+                };
+            cmbObjetos.Items.Add(quadrado);
             }
         }
-
-
-
 
 
 
@@ -91,6 +92,13 @@ namespace WfaExemploAPS
         private void lblBase_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cmbObjetos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FormaGeometrica obj = cmbObjetos.SelectedItem as FormaGeometrica;
+            txtArea.Text = obj.CalcularArea().ToString();
+            txtPerimetro.Text = obj.CalcularPerimetro().ToString();
         }
     }
 }

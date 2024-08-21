@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace WfaExemploAPS
 {
@@ -20,6 +21,11 @@ namespace WfaExemploAPS
         public override double CalcularPerimetro()
         {
             return lado * 4;
+        }
+
+        public override string ToString()
+        {
+            return $"Quadrado ({lado})";
         }
     }
 }
