@@ -24,21 +24,71 @@ namespace WfaExemploAPS
 
         private void cmbForma_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SelecionarTriangulo();
+            switch(cmbForma.Text)
+            {
+                case "Quadrado":
+                    SelecionarQuadrado();
+                    break;
+                case "Triângulo":
+                    SelecionarTriangulo();
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void SelecionarTriangulo()
         {
             cmbTriangulo.Visible = cmbForma.Text.Equals("Triângulo");
 
-            txtBase.Visible = cmbForma.Text.Equals("Triângulo");
-            txtAltura.Visible = cmbForma.Text.Equals("Triângulo");
-
-            lblBase.Visible = cmbForma.Text.Equals("Triângulo");
-            lblAltura.Visible = cmbForma.Text.Equals("Triângulo");
+            ExibirBase(true);
+            ExibirAltura(true);
+            ExibirRaio(false);
+            cmbTriangulo.Visible = true;
         }
 
+        private void SelecionarQuadrado()
+        {
+            ExibirBase(true);
+            ExibirAltura(false);
+            ExibirRaio(false);
+            cmbTriangulo.Visible = false;
+        }
+
+        private void ExibirBase(bool visivel)
+        {
+            lblBase.Visible = txtBase.Visible = visivel;
+        }
+        private void ExibirAltura(bool visivel)
+        {
+            lblAltura.Visible = txtAltura.Visible = visivel;
+        }
+
+        private void ExibirRaio(bool visivel)
+        {
+            lblRaio.Visible = txtRaio.Visible = visivel;
+        }
+
+        private void btnCriar_Click(object sender, EventArgs e)
+        {
+            if (cmbForma.Text.Equals("Quadrado"))
+            {
+
+            }
+        }
+
+
+
+
+
+
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void lblBase_Click(object sender, EventArgs e)
         {
 
         }
